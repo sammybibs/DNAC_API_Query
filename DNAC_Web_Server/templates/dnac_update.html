@@ -1,0 +1,27 @@
+<html>
+   <head>
+      <h3>Welcome to the DNAC LAB update engine </h3>
+  </head>
+       <!--  Load CSS in Flask with html-->
+       <link rel="stylesheet" href='/StaticFiles/main.css' />
+       <!--  Load JavaScript in Flask with html-->
+       <div class="wrapper">
+   <body>
+      <section>
+         Current values show as placeholders below: <br>
+         <form action = "http://localhost:81/update" method = "post">
+         <label for="Hostname">Hostname:</label>
+         <input type="text" id="Hostname" name="Hostname" placeholder={{ data['Host'] }}><br>
+         <label for="IPAddress">IP address:</label>
+         <input type="text" id="IPAddress" name="IPAddress" placeholder={{ data['IP'] }}><br>
+         <label for="port">HTTPS port:</label>
+         <input type="text" id="port" name="port" placeholder={{ data['Port'] }}><br>
+         <label for="Username">Username:</label>
+         <input type="text" id="Username" name="Username" placeholder={{ data['Username'] }}><br><br>
+         <button type="submit">Update Data</button>
+      </form><br>
+
+   </section>
+      <html>
+   <head>
+ 

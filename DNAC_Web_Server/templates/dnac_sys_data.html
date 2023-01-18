@@ -1,0 +1,64 @@
+<html>
+   <head>
+      <!--  Load CSS in Flask with html-->
+      <link rel="stylesheet" href='/StaticFiles/main.css' />
+      <!--  Load JavaScript in Flask with html-->
+      <div class="wrapper">
+      <h3>Welcome to the DNAC query engine </h3>
+  </head>
+   <body>
+      <section>
+         Current values set are as follows: <br>
+         IP address = {{ data['IP'] }} <br>
+         Hostname = {{ data['Host'] }} <br>
+         HTTPS port = {{ data['Port'] }} <br>
+         Username = {{ data['Username'] }} <br><br>
+
+
+         The local cache from DNAC was last updated {{ cache_timestamp }} <br>
+         Current cache size is {{ size }}KB <br>
+         The cache is for the {{owner[0]}} server  <br> <br>
+
+         To modify the DNAC Lab settings, hit the update DNAC button below <br>
+         <form action = "http://localhost:81/update" method = "get">
+            <button type="submit">Update DNAC</button>
+         </form>
+            <br>
+         To switch between sandbox/lab mode, hit the respecitve button below <br>
+         <form action = "http://localhost:81/sandbox_mode" method = "get">
+         <button type="submit">Sandbox DNAC</button>
+         </form>
+         <form action = "http://localhost:81/lab_mode" method = "get">
+         <button type="submit">Lab DNAC</button>
+         </form>
+      </section>
+   </body>
+
+         <nav>
+         <form action = "http://localhost:81/flush" method = "get">
+         <button type="submit">Flush</button>
+         ::: flush the local cache and force search live datasets via API calls
+         </form>
+
+         <form action = "http://localhost:81/cache" method = "get">
+         <button type="submit">Cache</button>
+         :::  pull down a local/fresh copy or data for faster searching (2-3 min)
+         </form>
+
+         <form action = "http://localhost:81/description" method = "get">
+         <button type="submit">Description</button>
+         :::  search interface description
+         </form>
+
+         <form action = "http://localhost:81/sfp" method = "get">
+         <button type="submit">SFP</button>
+         :::  get a report of all current used sfps and locations
+         </form>
+         <form action = "http://localhost:81/udf" method = "get">
+         <button type="submit">UDF</button>
+         :::  Update DNAC GUI with all SNMP contacts/locations
+            </form><br><br>
+      </nav>
+      </div>
+</html>
+

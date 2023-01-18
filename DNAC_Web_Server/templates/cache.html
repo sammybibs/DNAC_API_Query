@@ -1,0 +1,32 @@
+<html>
+   <head>
+      <h3>Welcome to the DNAC cache engine </h3>
+  </head>
+         <!--  Load CSS in Flask with html-->
+         <link rel="stylesheet" href='/StaticFiles/main.css' />
+         <!--  Load JavaScript in Flask with html-->
+         <div class="wrapper">
+   <body>
+      <section>
+      <form action = "http://localhost:81/cache" method = "post">
+         <label for="Password">DNAC Password:</label>
+         <input type="password" id="Password" name="Password" placeholder="Password"><br><br>
+         <input type="checkbox" onclick="myFunction()">Show Password
+         <br>
+         <button type="submit">Download Cache</button>
+      </form>
+   </section>
+   </body>
+</div>
+</html>
+
+<script>
+   function myFunction() {
+     var x = document.getElementById("Password");
+     if (x.type === "password") {
+       x.type = "text";
+     } else {
+       x.type = "password";
+     }
+   }
+</script>

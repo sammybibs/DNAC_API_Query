@@ -1,0 +1,13 @@
+server:
+  lab:
+    Host: mown.lab
+    IP: 192.35.254.20
+    Password: None
+    Port: 443
+    Username: DNACadmin
+  sandbox:
+    Host: sandboxdnac.cisco.com
+    IP: glean
+    Password: Cisco123!
+    Port: 443
+    Username: devnetuser

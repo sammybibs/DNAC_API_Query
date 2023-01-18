@@ -1,0 +1,46 @@
+<html>
+         <!--  Load CSS in Flask with html-->
+         <link rel="stylesheet" href='/StaticFiles/main.css' />
+         <!--  Load JavaScript in Flask with html-->
+         <div class="wrapper">
+            <h3>Welcome to the DNAC description engine </h3>
+   <body>
+      <section>
+      <form action = "http://localhost:81/description" method = "post">
+         <label for="Password">DNAC Password (not needed if have local cache):</label>
+         <input type="password" id="Password" name="Password" placeholder="Password"><br><br>
+         <input type="checkbox" onclick="myFunction()">Show Password
+         <br><br>
+         <label for="Search">Search String:</label>
+         <input type="text" id="Search" name="Search" placeholder="Search">
+         <br><br>
+
+         <label for="Type">Choose a Device Type:</label>
+         <select name="Type" id="Type">
+           <option value="ALL">ALL</option>
+           <option value="ACCESS">ACCESS</option>
+           <option value="CORE">CORE</option>
+           <option value="DISTRIBUTION">DISTRIBUTION</option>
+           <option value="BORDER ROUTER">BORDER ROUTER</option>
+            <option value="UNKNOWN">UNKNOWN</option>
+         </select>
+         <br><br>
+         <input type="submit" value="Submit">
+       </form>
+
+      </form>
+   </section>
+   </body>
+</div>
+</html>
+
+<script>
+   function myFunction() {
+     var x = document.getElementById("Password");
+     if (x.type === "password") {
+       x.type = "text";
+     } else {
+       x.type = "password";
+     }
+   }
+</script>
