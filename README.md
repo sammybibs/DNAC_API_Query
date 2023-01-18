@@ -1,6 +1,6 @@
 # Experimenting with DNAC, python and the API to front end the calls with Flask
 
-See https://ramblings-one.com/Blogger/ for development details from the ground up.
+See https://ramblings-one.com/Blogger/DNAC_API/ for development details from the ground up.
 
 If anyone would like to contribute to this project, feel free to reach out to me **sammybibs@gmail.com** or check the above blog ^
 
