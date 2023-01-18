@@ -10,6 +10,20 @@ If anyone would like to contribute to this project, feel free to reach out to me
 # Change log:
 * 0.1 : Initial beta release
 
+# Running the app:
+To load the app run 'python Web_app.py' in the /DNAC_Web_Server directory
+
+# Filelog in /DNAC_Web_Server
+* /cache/* : The locally cached files from sandboxdnac.cisco.com
+* /StaticFiles/main.css : The stylesheet for the web pages
+* /Templates/*.html : The HTML for the web pages
+* /Templates/skelington.html : Base layout needed for future pages
+* DNAC_API.py : API calls used to push/pull data from DNAC
+* Dnac_data.yml : Lab and sandbox sever details **(the lab one can be changed with the GUI 'update DNAC' option)**
+* requirements.txt : python requirements
+* Web_app.py : **The flask app launch file, this file should be run to load this app**
+
+
 ## Upcoming changes required
 1. Tidy up GUI menus (need nav menus in sub-pages)
 2. Pre checks to see if server is alive (i.e the sandbox is often down)

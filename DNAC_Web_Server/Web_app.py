@@ -24,7 +24,6 @@ import socket
 import requests
 from requests.auth import HTTPBasicAuth
 import json
-import socket
 
 
 ###Allow us to reload modules
